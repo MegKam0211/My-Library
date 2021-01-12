@@ -1,0 +1,35 @@
+@mixin inline-block-mobile {
+    color: basic(swamp);
+    display: inline-block;
+    line-height: 1.5;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin menu-font {
+    font-family: 'Emilys Candy', cursive;
+    font-size: heading(h5);
+    padding: 10px;
+}
+
+@mixin landing-img {
+    padding: 12px;
+    border-radius: 20px;
+    width: 100%
+}
+
+@mixin landing-bg {
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+}
+
+@mixin center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Emilys Candy', cursive;
+    font-size: heading(h3);
+    font-weight: 900;
+}

@@ -1,0 +1,291 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@import '_variables';
+@import '_functions';
+@import '_mixins';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Grids (choose one)
+@include foundation-xy-grid-classes;
+// @include foundation-grid;
+@include foundation-flex-grid;
+
+// Generic components
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-close-button;
+@include foundation-label;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-switch;
+@include foundation-table;
+// Basic components
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-dropdown;
+@include foundation-pagination;
+@include foundation-tooltip;
+
+// Containers
+@include foundation-accordion;
+@include foundation-media-object;
+@include foundation-orbit;
+@include foundation-responsive-embed;
+@include foundation-tabs;
+@include foundation-thumbnail;
+// Menu-based containers
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-accordion-menu;
+@include foundation-drilldown-menu;
+@include foundation-dropdown-menu;
+
+// Layout components
+@include foundation-off-canvas;
+@include foundation-reveal;
+@include foundation-sticky;
+@include foundation-title-bar;
+@include foundation-top-bar;
+
+// Helpers
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+// @include foundation-prototype-classes;
+
+// Motion UI
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+.bg-white-smoke-body {
+    background-color: basic(white-smoke);
+}
+
+//Header & Nav
+.bg-toast {
+    background-color: vintage(toast);
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.center-text {
+    @include center-text;
+}
+.header-logo {
+    opacity: 0.6;
+}
+.top-bar, .menu-text, .top-bar-left, .dropdown {
+    background-color: vintage(toast);
+}
+.title-bar-title, .menu-text {
+    @include menu-font;
+}
+a {
+    display: inline-block;
+    color: basic(swamp);
+    background-color: vintage(toast);
+    font-family: 'Emilys Candy', cursive;
+}
+
+.button {
+    background-color: vintage(cream);
+    color: basic(swamp);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+//Landing page
+blockquote, cite, .intro {
+    @include inline-block-mobile;
+}
+blockquote {
+    margin: 10px 0 10px 0;
+}
+.quote {
+    padding: 10px;
+}
+.bg-cream {
+    background-color: vintage(cream);
+    @include landing-bg;
+}
+.intro {
+    width: 100%;
+    text-align: center;
+}
+.intro h3 {
+    font-family: 'Emilys Candy', cursive;
+    font-weight: 700;
+}
+.landing-intro, .landing-img {
+    @include landing-img;
+}
+.bg-new-orleans {
+    background-color: vintage(new-orleans);
+    @include landing-bg;
+}
+.book-ofthe-month {
+    padding: 12px;
+
+    h3, h4 {
+        font-family: 'Emilys Candy', cursive;
+    }
+    p {
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+//Footer
+.bg-swamp {
+    background-color: basic(swamp);
+}
+.footer-blogs {
+    color: vintage(cream);
+    padding: 18px;
+
+    h3 {
+        font-family: 'Emilys Candy', cursive
+    }
+    li {
+        font-family: 'Open Sans', sans-serif;
+        padding: 8px;
+    }
+}
+.footer-goodreads {
+    h3 {
+        font-family: 'Emilys Candy', cursive
+    }
+}
+.goodreads-img {
+    width: 100%;
+}
+.bg-white-smoke-footer {
+    text-align: center;
+    @include landing-bg;
+    background-color: basic(white-smoke);
+    font-family: 'Emilys Candy', cursive;
+    
+    .books {
+        display: inline-block;
+        padding: 15px;
+        line-height: 1.5;
+    }
+
+    .footer-img {
+        height: 20%;
+        width: 20%;
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+
+//add-book.html
+.header-logo-add {
+    opacity: 0.5;
+}
+.center-add-text {
+    @include center-text;
+    color: vintage(affair);
+}
+.button-input {
+    padding: 30px;
+    background-color: vintage(affair);
+    border: 2.5px solid #132020;
+    color: basic(white-smoke);
+    border-radius: 5px;
+    font-size: 25px;
+}
+.button-input:hover {
+    filter: brightness(100%);
+    cursor: pointer;
+    opacity: 0.5;
+}
+.button-input:active {
+    transform: translateY(5px);
+    border: 2.5px solid #132020;
+}
+.input-group-button {
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    height: 30px;
+}
+label {
+    font-family: 'Emilys Candy', cursive;
+}
+.form-border {
+    padding: 15px;
+    background-color: vintage(jungle-mist);
+    margin: 15px;
+    border-radius: 15px;
+}
+
+
+//
+@media only screen and (min-width: 640px) {
+    .center-text {
+        font-size: heading(h2);
+    }
+    .title-bar-title {
+        font-size: heading(h4);
+    }
+    .menu-text {
+        font-size: heading(h4);
+    }
+    a {
+        font-size: heading(h5);
+    }
+    .button {
+        font-size: heading(h6);
+    }
+    .quote {
+        font-size: heading(h4);
+    }
+    cite {
+        font-size: heading(h5);
+    }
+    .intro p {
+        font-size: heading(h5);
+    }
+    .book-ofthe-month p {
+        font-size: heading(h5);
+    }
+    .lib-aisle {
+        width: 100%;
+    }
+    .footer-blogs, .footer-goodreads p {
+        font-size: heading(h5);
+    }
+}
+
+//
+@media only screen and (min-width: 1024px) {
+    .intro, .landing-intro {
+        display: inline-block;
+    }
+    .landing-img {
+        display: flex;
+        justify-items: center;
+    }
+
+    //add-book.
+    .header-logo-add {
+        width: 100%;
+    }
+
+}
+
+

@@ -1,0 +1,11 @@
+@function vintage($vintage-name) {
+    @return map-get($vintage-palette, $vintage-name)
+}
+
+@function basic($basic-name) {
+    @return map-get($basic-palette, $basic-name)
+}
+
+@function heading($font-size) {
+    @return map-get($heading, $font-size)
+}
