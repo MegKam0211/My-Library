@@ -66,6 +66,8 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+//index - mobile view - 375px
+
 .bg-white-smoke-body {
     background-color: basic(white-smoke);
 }
@@ -73,12 +75,12 @@
 //Header & Nav
 .bg-toast {
     background-color: vintage(toast);
+    
 }
-.container {
+/*.container {
     position: relative;
     text-align: center;
-    color: white;
-}
+}*/
 .center-text {
     @include center-text;
 }
@@ -149,6 +151,13 @@ blockquote {
 .bg-swamp {
     background-color: basic(swamp);
 }
+.footer-links {
+    display: inline-block;
+    color: vintage(cream);
+    background-color: basic(swamp);
+    font-family: sans-serif;
+
+}
 .footer-blogs {
     color: vintage(cream);
     padding: 18px;
@@ -167,7 +176,7 @@ blockquote {
     }
 }
 .goodreads-img {
-    width: 100%;
+    width: auto;
 }
 .bg-white-smoke-footer {
     text-align: center;
@@ -193,20 +202,24 @@ blockquote {
 
 
 //add-book.html
+//mobile-view - 375px
 .header-logo-add {
     opacity: 0.5;
 }
 .center-add-text {
-    @include center-text;
+    font-family: 'Emilys Candy', cursive;
+    font-size: heading(h6);
+    font-weight: 900;
     color: vintage(affair);
+    background-color: vintage(cream);
 }
 .button-input {
     padding: 30px;
     background-color: vintage(affair);
-    border: 2.5px solid #132020;
+    border: 1px solid #132020;
     color: basic(white-smoke);
     border-radius: 5px;
-    font-size: 25px;
+    font-size: header(h4);
 }
 .button-input:hover {
     filter: brightness(100%);
@@ -236,8 +249,13 @@ label {
 
 //
 @media only screen and (min-width: 640px) {
+    .header-logo {
+        height: 100%;
+        width: 180%;
+    }
     .center-text {
         font-size: heading(h2);
+        margin-top: 15%;
     }
     .title-bar-title {
         font-size: heading(h4);
@@ -263,22 +281,96 @@ label {
     .book-ofthe-month p {
         font-size: heading(h5);
     }
-    .lib-aisle {
-        width: 100%;
-    }
+
     .footer-blogs, .footer-goodreads p {
         font-size: heading(h5);
+    }
+
+    //add-book.
+    .header-logo-add {
+        width: 100%;
+    }
+    .center-add-text {
+        font-size: heading(h4);
+    }
+    .input-group-button {
+        font-size: heading(h3);
+        height: 50px;
+        width: 15px;
     }
 }
 
 //
 @media only screen and (min-width: 1024px) {
+    //Header
+    .header-logo {
+        height: 100%;
+        width: 100%;
+    }
+    .center-text {
+        font-size: 75px;
+        margin-top: 15%;
+    }
+    /*.container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }*/
+
+    //Nav
+    .title-bar-title {
+        font-size: heading(h1);
+    }
+
+    //Quote
+    blockquote, cite, .intro {
+        @include inline-block-pc;
+    }
+    blockquote {
+    margin: 25px 10 25px 10px;
+    }
+    .quote {
+        padding: 15px;
+        font-size: heading(h3);
+    }
+
+    //Landing
     .intro, .landing-intro {
         display: inline-block;
     }
+    .intro {
+        padding-left: 30px;
+        p {
+            font-size: heading(h4);
+            padding: 12px;
+        }
+    }
     .landing-img {
-        display: flex;
-        justify-items: center;
+        display: inline-block;
+        width: 50%;
+        height: 80%;
+        margin-left: 180px;
+        margin-right: 180px;
+        padding-left: 50px;
+    }
+    .lib-aisle {
+        padding: 6px;
+        border-radius: 10%;
+        width: 100%;
+        //height: 250%;
+    }
+    .book-otm-media {
+        margin-top: 45px;
+    }
+    .book-ofthe-month {
+        padding: 12px;
+        display: inline-block;
+        line-height: 2.5;
+    }
+    //footer
+    .footer-blogs {
+        display: inline-block;
+        line-height: 12;
     }
 
     //add-book.
